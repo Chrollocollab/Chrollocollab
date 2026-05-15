@@ -698,6 +698,25 @@
       </main>
 
 
+      <!-- Resume Modal -->
+      <div id="resumeModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center; padding:20px;">
+         <div style="background:#1a1a1a; border-radius:12px; width:100%; max-width:860px; height:90vh; display:flex; flex-direction:column; overflow:hidden;">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #333;">
+               <span style="color:#fff; font-weight:500;">Resume — Mohd Afiez</span>
+               <div style="display:flex; gap:10px; align-items:center;">
+                  <a href="my-resume.pdf" download="Afiez_Resume.pdf" style="color:#6ee2a0; font-size:13px; text-decoration:none;">Download</a>
+                  <button onclick="document.getElementById('resumeModal').style.display='none'" style="background:none; border:none; color:#fff; font-size:22px; cursor:pointer; line-height:1;">&times;</button>
+               </div>
+            </div>
+            <iframe src="my-resume.pdf" style="flex:1; border:none; width:100%;"></iframe>
+         </div>
+      </div>
+      <script>
+         document.getElementById('resumeModal').addEventListener('click', function(e) {
+            if (e.target === this) this.style.display = 'none';
+         });
+      </script>
+
       <!-- JS here -->
       <script src="assets/js/vendor/jquery.js"></script>
       <script src="assets/js/bootstrap-bundle.js"></script>
