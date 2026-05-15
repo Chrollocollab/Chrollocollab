@@ -280,10 +280,10 @@
                            </div>
                            <div class="col-lg-6  col-md-12 col-sm-6 mb-20">
                               <div class="tp-home-2-big-years-wrap-2 h-100">
-                                 <h3 class="tp-home-2-title mb-10"> My CV</h3>
+                                 <h3 class="tp-home-2-title mb-10" data-i18n="my_cv">My CV</h3>
                                  <span class="tp-home-2-border mb-50"></span>
-                                 <a href="#" class="tp-btn-2 mb-5 w-100 d-flex justify-content-between">
-                                    View
+                                 <a href="#" onclick="document.getElementById('resumeModal').style.display='flex'; return false;" class="tp-btn-2 mb-5 w-100 d-flex justify-content-between">
+                                    <span data-i18n="cv_view">View</span>
                                     <span>
                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M6.8667 1L11 5.00003L6.8667 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
@@ -291,8 +291,8 @@
                                        </svg>
                                     </span>
                                  </a>
-                                 <a href="#" class="tp-btn-2 w-100 d-flex justify-content-between">
-                                    Download
+                                 <a href="my-resume.pdf" download="Afiez_Resume.pdf" class="tp-btn-2 w-100 d-flex justify-content-between">
+                                    <span data-i18n="cv_download">Download</span>
                                     <span>
                                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M6.8667 1L11 5.00003L6.8667 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
