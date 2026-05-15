@@ -36,6 +36,20 @@
 
     ////////////////////////////////////////////////////
 	// 03. tp-home-service-active
+    new Swiper(".tp-banner-thumb-active", {
+        slidesPerView: 1,
+        speed: 800,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".tp-banner-thumb-active .swiper-pagination",
+            clickable: true,
+        },
+    });
+
     var tp_service_slide = new Swiper(".tp-home-service-active", {
 		slidesPerView: 1,
 		speed: 700,
