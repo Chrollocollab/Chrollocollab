@@ -1,0 +1,69 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.5 service start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-service{
+    &-link{
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--tp-common-white);
+    }
+    &-icon{
+        background-image: linear-gradient(to right, #ffffff1c, #00000061, #ffffff1c);
+        background-size: 200% auto;
+    }
+    &-completed {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--tp-common-white);
+    }
+    &-count{
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--tp-theme-secondary);
+    }
+    &-wrap{
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        backdrop-filter: blur(40px);
+        background-image: linear-gradient( to right, #ffffff0d, #ffffff12, #ffffff0d);
+        background-size: 200% auto;
+        transition: all .3s ease;
+        padding: 25px 30px 30px 30px;
+        &:hover{
+            background-position: right center;
+            & .tp-service-icon{
+                color: var(--tp-theme-secondary);
+                background-position: right center;
+            }
+        }
+        @media #{$xs} {
+            padding: 15px 20px 20px 20px;
+        }
+    }
+    &-body{
+        border-radius: 4px;
+        backdrop-filter: blur(40px);
+        background: -moz-linear-gradient(90deg, rgb(18 17 17 / 28%) 0%, rgb(255 255 255 / 0%) 100%);
+        background: -webkit-linear-gradient(90deg, rgb(18 17 17 / 28%) 0%, rgb(255 255 255 / 0%) 100%);
+        background: linear-gradient(90deg, rgb(18 17 17 / 28%) 0%, rgb(255 255 255 / 0%) 100%);
+        padding: 25px 30px 30px 30px;
+        & p{
+            font-size: 14px;
+            color: rgba(210, 210, 210, 0.65);
+            line-height: 24px;
+        } 
+    }
+    &-border{
+        background: #161616;
+        width: 100%;
+        height: 1px;
+        display: block;
+    }
+    &-left{
+        position: sticky;
+        top: 100px;
+    }
+}

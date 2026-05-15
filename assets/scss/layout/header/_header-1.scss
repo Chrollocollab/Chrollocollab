@@ -1,0 +1,19 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.1 Header Style 1
+/*----------------------------------------*/
+
+.#{$theme-prifix}-header{
+    &-spacing{
+        padding: 15px 0px;
+    }
+    &-border{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    &-spacing{
+        @media #{$lg,$md,$sm,$xs} {
+            padding: 15px 0px;
+        }
+    }
+}   

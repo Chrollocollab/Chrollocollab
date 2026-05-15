@@ -1,0 +1,57 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.4 portfolio start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-portfolio{
+    &-spacing{
+        padding-top: 65px;
+    }
+    &-subtitle{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 119%;
+        color: rgba(210, 210, 210, 0.65);
+    }
+    &-title{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 79%;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+    }
+    &-text{
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--tp-common-white);
+    }
+    &-btn{
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        color: var(--tp-theme-secondary);
+        border-bottom: 1px solid #d2d2d2;
+        padding: 3px 15px;
+    }
+    &-content{
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            margin-right: 0;
+        }
+    }
+    &-thumb{
+        &-wrap{
+            margin-right: -1020px;
+            @media #{$xxl,$xl} {
+                margin-right: -800px;
+            }
+            @media #{$lg,$md,$sm,$xs} {
+                margin-left: 0;
+                margin-right: -500px;
+            }
+            @media #{$md,$sm,$xs} {
+                margin-right: 0;
+            }
+        }
+    }
+}

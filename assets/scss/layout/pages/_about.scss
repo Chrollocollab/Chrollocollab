@@ -1,0 +1,111 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.1 about start
+/*----------------------------------------*/
+
+.#{$theme-prifix}-about{
+    &-spacing{
+        padding-top: 100px;
+        @media #{$sm,$xs} {
+            padding-top: 60px;
+        }
+    }
+    &-wrap{
+        & .tp-home-author-shadow{
+            margin-right: 0;
+            &::before{
+                width: 200px;
+                height: 200px;
+                bottom: -90px;
+                left: -90px;
+            }
+        }
+    }
+    &-heiko{
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(40px);
+        padding: 43px 70px 35px 54px;
+        background-image: linear-gradient( to right, #ffffff00, #ffffff21, #ffffff00);
+        background-size: 200% auto;
+        transition: all .3s ease;
+        &:hover{
+            background-position: right center;
+        }
+        @media #{$xs} {
+            padding: 23px 20px 25px 20px;
+        }
+        & p{
+            color: rgba(210, 210, 210, 0.65);
+            @media #{$xl,$lg,$md,$sm,$xs} {
+                & br{
+                    display: none;
+                }
+            }   
+            & span{
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &-testimonial{
+        &-wrap{
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 4px;
+            backdrop-filter: blur(40px);
+            background: linear-gradient(136deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.07) 100%);
+            @media #{$xs} {
+                padding: 15px;
+            }
+        }
+        &-ratings{
+            &-icon{
+                & i{
+                    color: var(--tp-theme-secondary);
+                }
+            }
+        }
+        &-item{
+            padding: 33px 45px 36px 40px;
+            backdrop-filter: blur(40px);
+            background: linear-gradient(313deg, rgb(4 2 2 / 48%) 0%, rgb(255 255 255 / 4%) 100%);
+            @media #{$xs} {
+                padding: 20px 20px 20px 20px;
+            }
+            & p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+        &-name{
+            font-weight: 500;
+            font-size: 16px;
+            color: #d2d2d2;
+            margin-bottom: 0;
+            & span{
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(210, 210, 210, 0.65);
+            }
+        }
+    }
+    &-contact{
+        &-wrap{
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(40px);
+            padding: 35px 30px;
+            background-image: linear-gradient( to right, #ffffff0d, #ffffff12, #ffffff0d);
+            background-size: 200% auto;
+            transition: all .3s ease;
+            &:hover{
+                background-position: right center;
+            }
+        }
+        &-title{
+            font-size: 36px;
+        }
+        &-copyright{
+            border: none;
+        }
+    }
+}

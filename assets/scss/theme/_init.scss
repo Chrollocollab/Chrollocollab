@@ -1,0 +1,45 @@
+@use '../utils' as *;
+/*---------------------------------
+  1.2 init style
+---------------------------------*/
+
+// custom-container-here
+$container:(1690,1570);
+
+@each $number in $container{
+  @media (min-width:1400px) {
+    .container-#{$number}{
+      max-width: #{$number}px;
+    }
+  }
+}
+
+// color-variables
+@each $name, $color in $colors {
+  @each $key, $value in $color{
+    .tp-text-#{$name}-#{$key} {
+      color: var(--tp-#{$name}-#{$key});
+    }
+
+    .tp-bg-#{$name}-#{$key} {
+      background-color: var(--tp-#{$name}-#{$key});
+    }
+  }
+}
+
+// tp-font-famely-variables
+@each $font, $famely in $font-family {
+  @each $key, $value in $famely{
+      .tp-#{$font}-#{$key} {
+        font-family: var(--tp-#{$font}-#{$key});
+      }
+  }
+}
+/* Font weight */
+$font-weight: 100;
+@while $font-weight < 1000 {
+  .fw-#{$font-weight} {
+    font-weight: (#{$font-weight});
+  }
+  $font-weight: $font-weight + 100;
+}
